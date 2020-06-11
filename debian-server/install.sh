@@ -26,12 +26,13 @@ sudo apt-get install -yy software-properties-common
 sudo apt-get install -yy apt-transport-https
 sudo apt-get install -yy ca-certificates
 sudo apt-get install -yy curl
+sudo apt-get install -yy sshd
+sudo apt-get install -yy ufw
 sudo apt-get install -yy gnupg-agent
 sudo apt-get install -yy git
 sudo apt-get install -yy tmux
 sudo apt-get install -yy ctags
 sudo apt-get install -yy xclip
-sudo apt-get install -yy sshd
 
 ## Programming Languages/Tools
 sudo apt-get install -yy python
