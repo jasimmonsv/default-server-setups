@@ -7,7 +7,8 @@ sudo add-apt-repository -yy universe
 
 # repository keys
 sudo apt-get install -yy gnupg-agent \
-    curl
+    curl \
+    sed
 ## Spideroak
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 573E3D1C51AE1B3D
 
@@ -15,6 +16,9 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 573E3D1C51AE1B3D
 sudo apt-get update -yy
 sudo apt-get upgrade -yy
 sudo apt-get dist-upgrade -yy
+
+# Configs
+sudo sed -i s/#HandleLidSwitch=suspend/HandleLidSwitch=ignore/ /etc/systemd/logind.conf
 
 # Installations
 ## Essential
