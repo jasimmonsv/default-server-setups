@@ -21,7 +21,7 @@ EOF
 sudo sysctl --system
 
 # Configure Firewall
-echo Is this the master node? (y/n)
+echo 'Is this the master node? (y/n)'
 read master_node
 
 if [ $master_node == 'y' ] ; then
