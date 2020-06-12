@@ -26,12 +26,9 @@ read master_node
 
 if [ $master_node == 'y' ] ; then
     sudo ufw allow 6443/tcp
-    sudo ufw allow 2379/tcp
-    sudo ufw allow 2380/tcp
-    sudo ufw allow 10250/tcp
-    sudo ufw allow 10251/tcp
-    sudo ufw allow 10252/tcp
+    sudo ufw allow 2379:2380/tcp
+    sudo ufw allow 10250:10252/tcp
 else
     sudo ufw allow 10250/tcp
-    sudo ufw allow 30000-32767/tcp
+    sudo ufw allow 30000:32767/tcp
 fi
